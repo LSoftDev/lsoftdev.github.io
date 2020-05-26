@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>LSoft</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div id="logo" oneclick="slowScroll('#top')">
+		<span>LSoft Base</span>
+	</div>
+	<div id="about">
+		<a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+		<a href="#" onclick="slowScroll('#overview')" title="Portfolio">Проекты</a>
+		<a href="#" onclick="slowScroll('#contacts')" title="Конакты">Контакты</a>
+	</div>
+   </header>
+
+ <div id="top">
+ 	<h1>Junior Developer</h1>
+ 	<h5>Начинающий front-end разработчик</h5>
+ </div>
+
+
+
+
+
+ <div id='main'>
+ <div class="intro">
+ 	<h2>Пердлагаемые разработки для вас</h2>
+ </div>
+ <div class="text">
+<span>Чем я занимаюсь:</span>
+<li>Разрабтка криптовалютных проектов.</li>
+<li>Разработка Чат-ботов Telegram.</li>
+<li>Разработка сайтов frontend.</li>
+</div>
+</div>
+
+
+
+<div id="overview">
+	<h2>Реализуймые проекты</h2>
+	<h4></h4>
+<div class="img">
+	<img src="img/python.jpg" alt="">
+	<span>Python разработка</span>
+	<li>Telegram Bot</li>
+	<li>Python Django "Изучаю"</li>
+</div>
+<div class="img">
+	<img src="img/front.jpg" alt="">
+	<span>Верстка сайтов</span>
+	<li>HTML/CSS</li>
+	<li>JavaScript, JQuery</li>
+</div>
+</div>
+
+<div id="contacts">
+	<center><h5>Контактная информация:</h5></center>
+	<div class="footer">
+       <a href='https://instagram.com/lyugin'><img src="img/instlogo.jpg"> Instagram</a>
+       <a href='https://teleg.run/skyphantom'><img src="img/tglogo.jpg"> Telegram</a>
+       <span>© Виктор Л. 2020</span>
+      </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	function slowScroll(id) {
+		$('html, body').animate({
+			scrollTop: $(id).offset().top
+		}, 500);
+}
+
+$(document).on("scroll", function () {
+	if($(window).scrollTop() === 0)
+		$("header").removeClass("fixed");
+	else
+		$("header").attr("class", "fixed");
+});
+</script>
+</body>
+</html>
